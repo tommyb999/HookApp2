@@ -1,0 +1,6 @@
+/Users/MartynBale/Documents/PluralSight/asp-net-mvc5-web-apps/02/demos/demos/after/OdeToFoodMVC/OdeToFood/OdeToFood.Data/bin/Debug/OdeToFood.Data.dll
+/Users/MartynBale/Documents/PluralSight/asp-net-mvc5-web-apps/02/demos/demos/after/OdeToFoodMVC/OdeToFood/OdeToFood.Data/bin/Debug/OdeToFood.Data.pdb
+/Users/MartynBale/Documents/PluralSight/asp-net-mvc5-web-apps/02/demos/demos/after/OdeToFoodMVC/OdeToFood/OdeToFood.Data/obj/Debug/OdeToFood.Data.csprojAssemblyReference.cache
+/Users/MartynBale/Documents/PluralSight/asp-net-mvc5-web-apps/02/demos/demos/after/OdeToFoodMVC/OdeToFood/OdeToFood.Data/obj/Debug/OdeToFood.Data.csproj.CoreCompileInputs.cache
+/Users/MartynBale/Documents/PluralSight/asp-net-mvc5-web-apps/02/demos/demos/after/OdeToFoodMVC/OdeToFood/OdeToFood.Data/obj/Debug/OdeToFood.Data.dll
+/Users/MartynBale/Documents/PluralSight/asp-net-mvc5-web-apps/02/demos/demos/after/OdeToFoodMVC/OdeToFood/OdeToFood.Data/obj/Debug/OdeToFood.Data.pdb

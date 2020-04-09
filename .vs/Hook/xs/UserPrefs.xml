@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{EFD95B64-7C7C-4256-9932-12861614971B}|">
+  <MonoDevelop.Ide.ItemProperties.Hook.Web PreferredExecutionTarget="/Applications/Google Chrome 2.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood.Web/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="OdeToFood.Data/Models/WorkItem.cs" Line="15" Column="6" />
+      <File FileName="OdeToFood.Data/Services/IData.cs" />
+      <File FileName="OdeToFood.Data/Services/InMemoryWorkItemData.cs" />
+      <File FileName="OdeToFood.Web/Controllers/HomeController.cs" Line="18" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hook" expanded="True">
+            <Node name="Hook.Data" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="Hook.Web" expanded="True">
+              <Node name="App_Start" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+              <Node name="Scripts" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

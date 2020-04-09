@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/IRestaurantData.cs">
+    <Files>
+      <File FileName="Models/CuisineType.cs" Line="1" Column="1" />
+      <File FileName="Models/Restaurant.cs" Line="1" Column="1" />
+      <File FileName="Services/InMemoryRestaurantData.cs" Line="1" Column="1" />
+      <File FileName="Services/IRestaurantData.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

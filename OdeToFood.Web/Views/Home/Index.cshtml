@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Hook.Data.Models.WorkItem>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <div>
+        There are @Model.Count() work items in the db. 
+    </div>
+</div>
+
+<table style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Product</th>
+        <th>Developer</th>
+    </tr>
+
+    @foreach (var WorkItem in Model)
+    {
+    <tr>
+        <td>@WorkItem.Id</td>
+        <td>@WorkItem.Title</td>
+        <td>@WorkItem.Product</td>
+        <td>@WorkItem.Developer</td>
+    </tr>
+    }
+</table>
