@@ -2,5 +2,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Hello</h2>
+
+<table style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Product</th>
+        <th>Developer</th>
+    </tr>
+
+    @foreach (var WorkItem in Model)
+    {
+        <tr>
+            <td>@WorkItem.Id</td>
+            <td>@WorkItem.Title</td>
+            <td>@WorkItem.Product</td>
+            <td>@WorkItem.Developer</td>
+        </tr>
+    }
+</table>
 

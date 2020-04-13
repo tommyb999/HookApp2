@@ -4,3 +4,12 @@
 /Users/MartynBale/dev/HookApp/OdeToFood.Data/obj/Debug/Hook.Data.csproj.CoreCompileInputs.cache
 /Users/MartynBale/dev/HookApp/OdeToFood.Data/obj/Debug/OdeToFood.Data.dll
 /Users/MartynBale/dev/HookApp/OdeToFood.Data/obj/Debug/OdeToFood.Data.pdb
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/bin/Debug/OdeToFood.Data.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/bin/Debug/OdeToFood.Data.pdb
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/bin/Debug/Newtonsoft.Json.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/bin/Debug/Newtonsoft.Json.xml
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/Hook.Data.csprojAssemblyReference.cache
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/Hook.Data.csproj.CoreCompileInputs.cache
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/Hook.Data.csproj.CopyComplete
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/OdeToFood.Data.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/OdeToFood.Data.pdb
