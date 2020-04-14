@@ -1,14 +1,13 @@
 ﻿<Properties StartupConfiguration="{EFD95B64-7C7C-4256-9932-12861614971B}|">
   <MonoDevelop.Ide.ItemProperties.Hook.Web PreferredExecutionTarget="/Applications/Google Chrome 2.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood.Web/App_Start/ContainerConfig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood.Data/Services/InMemoryWorkItemData.cs">
     <Files>
+      <File FileName="OdeToFood.Data/Services/InMemoryWorkItemData.cs" Line="59" Column="23" />
+      <File FileName="OdeToFood.Web/Controllers/WorkItemsController.cs" Line="79" Column="37" />
+      <File FileName="OdeToFood.Web/Controllers/HomeController.cs" Line="42" Column="1" />
+      <File FileName="OdeToFood.Data/Models/WorkItem.cs" Line="14" Column="19" />
+      <File FileName="OdeToFood.Web/Views/WorkItems/Edit.cshtml" Line="8" Column="1" />
       <File FileName="OdeToFood.Data/Services/IData.cs" Line="12" Column="30" />
-      <File FileName="OdeToFood.Data/Services/InMemoryWorkItemData.cs" Line="11" Column="6" />
-      <File FileName="OdeToFood.Web/Controllers/WorkItemsController.cs" Line="10" Column="2" />
-      <File FileName="OdeToFood.Web/Controllers/HomeController.cs" Line="17" Column="32" />
-      <File FileName="OdeToFood.Data/Models/WorkItem.cs" Line="1" Column="1" />
-      <File FileName="OdeToFood.Web/Global.asax.cs" Line="1" Column="1" />
-      <File FileName="OdeToFood.Web/App_Start/ContainerConfig.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,18 +15,18 @@
           <Node name="Hook" expanded="True">
             <Node name="Hook.Data" expanded="True">
               <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="InMemoryWorkItemData.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="Hook.Web" expanded="True">
-              <Node name="App_Start" expanded="True">
-                <Node name="ContainerConfig.cs" selected="True" />
-              </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="WorkItems" expanded="True" />
               </Node>
               <Node name="Global.asax" expanded="True" />
+              <Node name="Web.config" expanded="True" />
             </Node>
           </Node>
         </State>

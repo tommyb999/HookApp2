@@ -25,7 +25,7 @@ namespace Hook.Web.Controllers
             var model = db.GetAll();
 
             //Create a file to write to
-            string path = @"/Users/MartynBale/dev/HookApp2/json_output1.json";
+            string path = @"/Users/MartynBale/dev/HookApp2/json_output.json";
             //using (StreamWriter file = System.IO.File.AppendText(path))
             using (StreamWriter file = new StreamWriter(path))
             {
@@ -39,21 +39,7 @@ namespace Hook.Web.Controllers
             }
             return View(model);
         }
-
-        //public static void WriteToFile()
-        //{
-        //    var model = db.GetAll();
-
-        //    // Adding the json output
-        //    foreach (var item in model)
-        //    {
-        //        file.WriteLine(JsonConvert.SerializeObject(item));
-        //        Console.WriteLine(JsonConvert.SerializeObject(item));
-        //    }
-
-        //}
-
-       
+      
 
        
         public ActionResult About()

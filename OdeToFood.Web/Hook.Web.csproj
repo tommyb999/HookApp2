@@ -185,6 +185,7 @@
     <Content Include="Views\WorkItems\Detail.cshtml" />
     <Content Include="Views\WorkItems\NotFound.cshtml" />
     <Content Include="Views\WorkItems\Create.cshtml" />
+    <Content Include="Views\WorkItems\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

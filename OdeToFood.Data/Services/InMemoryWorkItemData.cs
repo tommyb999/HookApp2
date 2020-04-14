@@ -54,6 +54,17 @@ namespace Hook.Data.Services
             workitem.Id = WorkItems.Max(r => r.Id) + 1; 
         }
 
-        
+        public void Update(WorkItem workitem)
+        {
+            var existing = Get(workitem.Id);
+            if(existing != null)
+            {
+                existing.Title = workitem.Title;
+                existing.Product = workitem.Product;
+                existing.Developer = workitem.Developer;
+            }
+        }
+
+
     }
 }

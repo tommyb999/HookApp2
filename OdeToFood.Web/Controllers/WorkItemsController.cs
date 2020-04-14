@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Hook.Data.Models;
 using Hook.Data.Services;
+using Newtonsoft.Json;
 
 namespace Hook.Web.Controllers
 {
@@ -22,6 +24,20 @@ namespace Hook.Web.Controllers
         {
             var model = db.GetAll();
 
+            //Create a file to write to
+            string path = @"/Users/MartynBale/dev/HookApp2/json_output.json";
+            //using (StreamWriter file = System.IO.File.AppendText(path))
+            using (StreamWriter file = new StreamWriter(path))
+            {
+                // Adding the json output
+                foreach (var item in model)
+                {
+                    file.WriteLine(JsonConvert.SerializeObject(item));
+                    //Console.WriteLine(JsonConvert.SerializeObject(item));
+                    //Console.WriteLine("here");
+                }
+            }
+
             return View(model);
         }
 
@@ -37,6 +53,8 @@ namespace Hook.Web.Controllers
             return View(model);
         }
 
+
+        [HttpGet]
         public ActionResult Edit(int id)
         {
             //Implement the edit function
@@ -49,6 +67,23 @@ namespace Hook.Web.Controllers
 
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(WorkItem workitem)
+        {
+            //Implement the create function
+
+            if (ModelState.IsValid)
+            {
+                db.Update(workitem);
+                return RedirectToAction("Index");
+            }
+
+            return View(workitem);
+        }
+
+
 
         public ActionResult Delete(int id)
         {
@@ -76,7 +111,12 @@ namespace Hook.Web.Controllers
         {
             //Implement the create function
 
-            db.Add(workitem);
+            if(ModelState.IsValid)
+            {
+                db.Add(workitem);
+                return RedirectToAction("Index");
+            }
+
             return View();
         }
 

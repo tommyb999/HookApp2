@@ -10,6 +10,7 @@ namespace Hook.Data.Services
     {
         IEnumerable<WorkItem> GetAll();
         WorkItem Get(int id);
-        void Add(WorkItem workitem); 
+        void Add(WorkItem workitem);
+        void Update(WorkItem workitem);
     }
 }
