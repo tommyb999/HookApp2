@@ -14,27 +14,11 @@ namespace Hook.Data.Services
         public InMemoryWorkItemData()
         {
             WorkItems = new List<WorkItem>();
-            //{
-                //new WorkItem { Id = 4, Title = "Hook", Product = "Some Product", Developer = "Tom"},
-                //new WorkItem { Id = 5, Title = "Something", Product = "Some Product", Developer = "Manish"},
-                //new WorkItem { Id = 6, Title = "Something else", Product = "Some Product", Developer = "Josh"},
-
-                //Create a file to write to
-            //};
 
             string path = @"/Users/MartynBale/dev/HookApp2/json_output.json";
-            string line;
-            using (StreamReader file = new StreamReader(path))
-            {
-                // Adding the json output
-                while ((line = file.ReadLine()) != null)
-                {
-                    //Console.WriteLine(line);
-                    //Console.WriteLine(JsonConvert.DeserializeObject(line));
-                    WorkItems.Add(JsonConvert.DeserializeObject<WorkItem>(line));
-                }
 
-            }
+            string text = File.ReadAllText(path);
+            WorkItems = JsonConvert.DeserializeObject<List<WorkItem>>(text);
 
         }
 

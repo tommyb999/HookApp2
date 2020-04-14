@@ -26,17 +26,9 @@ namespace Hook.Web.Controllers
 
             //Create a file to write to
             string path = @"/Users/MartynBale/dev/HookApp2/json_output.json";
-            //using (StreamWriter file = System.IO.File.AppendText(path))
-            using (StreamWriter file = new StreamWriter(path))
-            {
-                // Adding the json output
-                foreach (var item in model)
-                {
-                    file.WriteLine(JsonConvert.SerializeObject(item));
-                    //Console.WriteLine(JsonConvert.SerializeObject(item));
-                    //Console.WriteLine("here");
-                }
-            }
+
+            System.IO.File.WriteAllText(path, JsonConvert.SerializeObject(model));
+
             return View(model);
         }
       
