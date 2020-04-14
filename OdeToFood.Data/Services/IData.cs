@@ -12,5 +12,6 @@ namespace Hook.Data.Services
         WorkItem Get(int id);
         void Add(WorkItem workitem);
         void Update(WorkItem workitem);
+        void Delete(int id);
     }
 }

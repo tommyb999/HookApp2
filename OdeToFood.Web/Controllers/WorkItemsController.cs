@@ -75,7 +75,7 @@ namespace Hook.Web.Controllers
         }
 
 
-
+        [HttpGet]
         public ActionResult Delete(int id)
         {
             //Implement the delete function
@@ -88,6 +88,25 @@ namespace Hook.Web.Controllers
 
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(WorkItem workitem)
+        {
+            //Implement the create function
+
+            if (ModelState.IsValid)
+            {
+                db.Delete(workitem.Id);
+                Console.WriteLine("inside");
+                return RedirectToAction("Index");
+            }
+
+            Console.WriteLine("here");
+          
+            return View();
+        }
+
 
         [HttpGet]
         public ActionResult Create()

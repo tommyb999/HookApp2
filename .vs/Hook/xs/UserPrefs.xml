@@ -1,23 +1,26 @@
 ﻿<Properties StartupConfiguration="{EFD95B64-7C7C-4256-9932-12861614971B}|">
   <MonoDevelop.Ide.ItemProperties.Hook.Web PreferredExecutionTarget="/Applications/Google Chrome 2.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood.Data/Services/InMemoryWorkItemData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood.Data/Models/WorkItem.cs">
     <Files>
-      <File FileName="OdeToFood.Data/Services/InMemoryWorkItemData.cs" Line="59" Column="23" />
-      <File FileName="OdeToFood.Web/Controllers/WorkItemsController.cs" Line="79" Column="37" />
-      <File FileName="OdeToFood.Web/Controllers/HomeController.cs" Line="42" Column="1" />
-      <File FileName="OdeToFood.Data/Models/WorkItem.cs" Line="14" Column="19" />
+      <File FileName="OdeToFood.Data/Services/InMemoryWorkItemData.cs" Line="63" Column="45" />
+      <File FileName="OdeToFood.Web/Controllers/WorkItemsController.cs" Line="105" Column="39" />
+      <File FileName="OdeToFood.Web/Controllers/HomeController.cs" Line="32" Column="32" />
       <File FileName="OdeToFood.Web/Views/WorkItems/Edit.cshtml" Line="8" Column="1" />
-      <File FileName="OdeToFood.Data/Services/IData.cs" Line="12" Column="30" />
+      <File FileName="OdeToFood.Data/Services/IData.cs" Line="15" Column="40" />
+      <File FileName="OdeToFood.Web/Views/WorkItems/Delete.cshtml" Line="9" Column="27" />
+      <File FileName="OdeToFood.Web/Views/WorkItems/Create.cshtml" Line="9" Column="1" />
+      <File FileName="OdeToFood.Web/Views/WorkItems/Index.cshtml" Line="1" Column="1" />
+      <File FileName="OdeToFood.Data/Models/WorkItem.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Hook" expanded="True">
             <Node name="Hook.Data" expanded="True">
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="InMemoryWorkItemData.cs" selected="True" />
+              <Node name="Models" expanded="True">
+                <Node name="WorkItem.cs" selected="True" />
               </Node>
+              <Node name="Services" expanded="True" />
             </Node>
             <Node name="Hook.Web" expanded="True">
               <Node name="Controllers" expanded="True" />

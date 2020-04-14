@@ -49,6 +49,26 @@ namespace Hook.Data.Services
             }
         }
 
+        public void Delete(int id)
+        {
+            foreach (var item in WorkItems)
+            {
+                Console.WriteLine(item.Title);
+            }
+            Console.WriteLine("xxxxxxxxx");
+
+            Console.WriteLine(id);
+
+            Console.WriteLine("xxxxxxxx");
+            var workitem = Get(id);
+
+            WorkItems.Remove(workitem);
+
+            foreach (var item in WorkItems)
+            {
+                Console.WriteLine(item.Title);
+            }
+        }
 
     }
 }
