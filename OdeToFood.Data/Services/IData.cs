@@ -9,5 +9,7 @@ namespace Hook.Data.Services
     public interface IData
     {
         IEnumerable<WorkItem> GetAll();
+        WorkItem Get(int id);
+        void Add(WorkItem workitem); 
     }
 }

@@ -5,6 +5,8 @@
 
 <h2>Hello</h2>
 
+<p>@Html.ActionLink("Create New", "Create")</p>
+
 <table style="width:100%">
     <tr>
         <th>ID</th>
@@ -15,12 +17,15 @@
 
     @foreach (var WorkItem in Model)
     {
-        <tr>
-            <td>@WorkItem.Id</td>
-            <td>@WorkItem.Title</td>
-            <td>@WorkItem.Product</td>
-            <td>@WorkItem.Developer</td>
-        </tr>
+<tr>
+    <td>@WorkItem.Id</td>
+    <td>@WorkItem.Title</td>
+    <td>@WorkItem.Product</td>
+    <td>@WorkItem.Developer</td>
+    <td>@Html.ActionLink("Edit", "Edit", new { id = WorkItem.Id })</td>
+    <td>@Html.ActionLink("Details", "Detail", new { id = WorkItem.Id })</td>
+    <td>@Html.ActionLink("Delete", "Delete", new { id = WorkItem.Id })</td>
+</tr>
     }
 </table>
 

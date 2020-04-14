@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{EFD95B64-7C7C-4256-9932-12861614971B}|">
   <MonoDevelop.Ide.ItemProperties.Hook.Web PreferredExecutionTarget="/Applications/Google Chrome 2.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood.Web/Views/Home/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood.Web/App_Start/ContainerConfig.cs">
     <Files>
-      <File FileName="OdeToFood.Data/Models/WorkItem.cs" Line="15" Column="6" />
-      <File FileName="OdeToFood.Data/Services/IData.cs" Line="1" Column="1" />
-      <File FileName="OdeToFood.Data/Services/InMemoryWorkItemData.cs" Line="34" Column="82" />
-      <File FileName="OdeToFood.Web/Controllers/HomeController.cs" Line="36" Column="47" />
-      <File FileName="OdeToFood.Web/Controllers/WorkItemsController.cs" Line="10" Column="50" />
-      <File FileName="OdeToFood.Web/Views/WorkItems/Index.cshtml" Line="1" Column="1" />
-      <File FileName="OdeToFood.Web/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="OdeToFood.Data/Services/IData.cs" Line="12" Column="30" />
+      <File FileName="OdeToFood.Data/Services/InMemoryWorkItemData.cs" Line="11" Column="6" />
+      <File FileName="OdeToFood.Web/Controllers/WorkItemsController.cs" Line="10" Column="2" />
+      <File FileName="OdeToFood.Web/Controllers/HomeController.cs" Line="17" Column="32" />
+      <File FileName="OdeToFood.Data/Models/WorkItem.cs" Line="1" Column="1" />
+      <File FileName="OdeToFood.Web/Global.asax.cs" Line="1" Column="1" />
+      <File FileName="OdeToFood.Web/App_Start/ContainerConfig.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,13 +19,15 @@
               <Node name="Services" expanded="True" />
             </Node>
             <Node name="Hook.Web" expanded="True">
+              <Node name="App_Start" expanded="True">
+                <Node name="ContainerConfig.cs" selected="True" />
+              </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
                 <Node name="WorkItems" expanded="True" />
               </Node>
+              <Node name="Global.asax" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -38,10 +38,22 @@ namespace Hook.Data.Services
 
         }
 
-                
+        public WorkItem Get(int id)
+        {
+            return WorkItems.FirstOrDefault(r => r.Id == id);
+        }
+
         public IEnumerable<WorkItem> GetAll()
         {
             return WorkItems.OrderBy(r => r.Id);
         }
+
+        public void Add(WorkItem workitem)
+        {
+            WorkItems.Add(workitem);
+            workitem.Id = WorkItems.Max(r => r.Id) + 1; 
+        }
+
+        
     }
 }

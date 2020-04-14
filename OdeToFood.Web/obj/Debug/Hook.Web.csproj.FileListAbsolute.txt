@@ -152,3 +152,14 @@
 /Users/MartynBale/dev/HookApp2/OdeToFood.Web/obj/Debug/Hook.Web.csproj.CopyComplete
 /Users/MartynBale/dev/HookApp2/OdeToFood.Web/obj/Debug/OdeToFood.Web.dll
 /Users/MartynBale/dev/HookApp2/OdeToFood.Web/obj/Debug/OdeToFood.Web.pdb
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/Autofac.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/Autofac.Integration.Mvc.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/System.Runtime.CompilerServices.Unsafe.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/System.Threading.Tasks.Extensions.dll
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/System.Runtime.CompilerServices.Unsafe.xml
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/System.Threading.Tasks.Extensions.xml
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/Microsoft.Bcl.AsyncInterfaces.xml
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/Autofac.pdb
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/Autofac.xml
+/Users/MartynBale/dev/HookApp2/OdeToFood.Web/bin/Autofac.Integration.Mvc.xml

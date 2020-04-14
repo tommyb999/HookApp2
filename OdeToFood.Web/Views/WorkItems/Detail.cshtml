@@ -1,6 +1,23 @@
-﻿@{
+﻿@model Hook.Data.Models.WorkItem
+@{
     ViewBag.Title = "Detail";
 }
 
 <h2>Detail</h2>
+
+<table style="width:100%">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Product</th>
+        <th>Developer</th>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayFor(model => model.Id)</td>
+        <td>@Html.DisplayFor(model => model.Title)</td>
+        <td>@Html.DisplayFor(model => model.Product)</td>
+        <td>@Html.DisplayFor(model => model.Developer)</td>
+    </tr>
+</table>
 

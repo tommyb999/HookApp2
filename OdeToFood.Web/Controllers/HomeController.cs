@@ -14,9 +14,9 @@ namespace Hook.Web.Controllers
     {
         IData db;
 
-        public HomeController()
+        public HomeController(IData db)
         {
-            db = new InMemoryWorkItemData();
+            this.db = db;
 
         }
 
@@ -26,14 +26,15 @@ namespace Hook.Web.Controllers
 
             //Create a file to write to
             string path = @"/Users/MartynBale/dev/HookApp2/json_output1.json";
-            using (StreamWriter file = System.IO.File.AppendText(path))
+            //using (StreamWriter file = System.IO.File.AppendText(path))
+            using (StreamWriter file = new StreamWriter(path))
             {
                 // Adding the json output
                 foreach (var item in model)
                 {
                     file.WriteLine(JsonConvert.SerializeObject(item));
-                    Console.WriteLine(JsonConvert.SerializeObject(item));
-                    Console.WriteLine("here");
+                    //Console.WriteLine(JsonConvert.SerializeObject(item));
+                    //Console.WriteLine("here");
                 }
             }
             return View(model);

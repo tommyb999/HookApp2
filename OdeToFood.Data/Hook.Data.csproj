@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\InMemoryWorkItemData.cs" />
     <Compile Include="Services\IData.cs" />
+    <Compile Include="Models\DeveloperType.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
