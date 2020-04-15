@@ -91,19 +91,18 @@ namespace Hook.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(WorkItem workitem)
+        public ActionResult Delete(int id, FormCollection form)
         {
             //Implement the create function
 
             if (ModelState.IsValid)
             {
-                db.Delete(workitem.Id);
+                db.Delete(id);
                 Console.WriteLine("inside");
                 return RedirectToAction("Index");
             }
 
-            Console.WriteLine("here");
-          
+         
             return View();
         }
 
