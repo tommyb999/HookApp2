@@ -14,7 +14,6 @@ namespace Hook.Data.Models
         [Required]
         public string Title { get; set; }
         public string Product { get; set; }
-        //public DeveloperType Developer { get; set; }
-        public string Developer { get; set; }
+        public DeveloperType Developer { get; set; }
     }
 }

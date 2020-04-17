@@ -35,8 +35,7 @@ namespace Hook.Data.Services
         public void Add(WorkItem workitem)
         {
             WorkItems.Add(workitem);
-            workitem.Id = WorkItems.Max(r => r.Id) + 1;
-            SaveToFile();
+            workitem.Id = WorkItems.Max(r => r.Id) + 1; 
         }
 
         public void Update(WorkItem workitem)
@@ -48,7 +47,6 @@ namespace Hook.Data.Services
                 existing.Product = workitem.Product;
                 existing.Developer = workitem.Developer;
             }
-            SaveToFile();
         }
 
         public void Delete(int id)
@@ -58,16 +56,6 @@ namespace Hook.Data.Services
             {
                 WorkItems.Remove(workitem);
             }
-            SaveToFile();
-
-        }
-
-        public void SaveToFile()
-        {
-            //Create a file to write to
-            string path = @"/Users/MartynBale/dev/HookApp2/json_output.json";
-
-            System.IO.File.WriteAllText(path, JsonConvert.SerializeObject(WorkItems));
         }
 
     }
