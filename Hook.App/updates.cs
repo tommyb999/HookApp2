@@ -23,29 +23,29 @@ namespace Hook.App
 
                 Console.WriteLine("Do you want to update this work item? y/n");
 
-                var workitemResponse = Common.Response();
+                var workitemResponse = common.Response();
 
-                if (workitemResponse == "y")
+                if (workitemResponse)
                 {
                     Console.WriteLine("Do you want to update the work item title? y/n");
-                    var titleResponse = Common.Response();
-                    if (titleResponse == "y")
+                    var titleResponse = common.Response();
+                    if (titleResponse)
                     {
-                        changedEntry = Common.getChange(changedEntry, "Title");
+                        changedEntry = common.getChange(changedEntry, "Title");
                     }
 
                     Console.WriteLine("Do you want to update the work item product? y/n");
-                    var productResponse = Common.Response();
-                    if (productResponse == "y")
+                    var productResponse = common.Response();
+                    if (productResponse)
                     {
-                        changedEntry = Common.getChange(changedEntry, "Product");
+                        changedEntry = common.getChange(changedEntry, "Product");
                     }
 
                     Console.WriteLine("Do you want to update the work item Developer? y/n");
-                    var devResponse = Common.Response();
-                    if (devResponse == "y")
+                    var devResponse = common.Response();
+                    if (devResponse)
                     {
-                        changedEntry = Common.getChange(changedEntry, "Developer");
+                        changedEntry = common.getChange(changedEntry, "Developer");
                     }
 
                 }
@@ -55,7 +55,7 @@ namespace Hook.App
 
                 Console.WriteLine("Entry successfully updated");
                 Console.WriteLine("New entry details:");
-                Common.Get(changedEntry.Id);
+                common.Get(changedEntry.Id);
 
             }
         }

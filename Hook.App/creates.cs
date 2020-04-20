@@ -20,15 +20,15 @@ namespace Hook.App
 
                 Console.WriteLine("Do you want to create a work item? y/n");
 
-                var workitemResponse = Common.Response();
+                var workitemResponse = common.Response();
 
                 if (workitemResponse == "y")
                 {
                     Console.WriteLine("Do you want to update the work item title? y/n");
-                    var titleResponse = Common.Response();
+                    var titleResponse = common.Response();
                     if (titleResponse == "y")
                     {
-                        changedEntry = Common.getChange(changedEntry, "Title");
+                        changedEntry = common.getChange(changedEntry, "Title");
                     }
                     else
                     {
@@ -36,10 +36,10 @@ namespace Hook.App
                     }
 
                     Console.WriteLine("Do you want to update the work item product? y/n");
-                    var productResponse = Common.Response();
+                    var productResponse = common.Response();
                     if (productResponse == "y")
                     {
-                        changedEntry = Common.getChange(changedEntry, "Product");
+                        changedEntry = common.getChange(changedEntry, "Product");
                     }
                     else
                     {
@@ -47,10 +47,10 @@ namespace Hook.App
                     }
 
                     Console.WriteLine("Do you want to update the work item Developer? y/n");
-                    var devResponse = Common.Response();
+                    var devResponse = common.Response();
                     if (devResponse == "y")
                     {
-                        changedEntry = Common.getChange(changedEntry, "Developer");
+                        changedEntry = common.getChange(changedEntry, "Developer");
                     }
                     else
                     {
@@ -65,7 +65,7 @@ namespace Hook.App
 
                 Console.WriteLine("Entry successfully created");
                 Console.WriteLine("New entry details:");
-                Common.Get(changedEntry.Id);
+                common.Get(changedEntry.Id);
 
             }
         }

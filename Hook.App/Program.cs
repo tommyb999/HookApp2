@@ -213,7 +213,7 @@ namespace Hook.App
 
                 Console.WriteLine("Entry successfully created");
                 Console.WriteLine("New entry details:");
-                Common.Get(changedEntry.Id);
+                common.Get(changedEntry.Id);
 
             }
         }
@@ -243,7 +243,7 @@ namespace Hook.App
 
                 Console.WriteLine("Entry successfully deleted");
                 Console.WriteLine("Current list of work items:");
-                Common.GetAll();
+                common.GetAll();
 
             }
         }

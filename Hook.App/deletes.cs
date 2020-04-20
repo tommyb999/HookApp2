@@ -22,7 +22,7 @@ namespace Hook.App
 
                 Console.WriteLine("Do you want to delete this work item? y/n");
 
-                var workitemResponse = Common.Response();
+                var workitemResponse = common.Response();
 
                 if (workitemResponse == "y")
                 {
@@ -32,7 +32,7 @@ namespace Hook.App
 
                 Console.WriteLine("Entry successfully deleted");
                 Console.WriteLine("Current list of work items:");
-                Common.GetAll();
+                common.GetAll();
 
             }
         }
