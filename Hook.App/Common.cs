@@ -19,12 +19,15 @@ namespace Hook.App
 
         public static bool Response()
         {
-            var ans = Console.ReadKey().ToString();
+            var ans = Console.ReadLine().ToString();
 
-            while (ans != "y" || ans != "n")
+            while (ans != "y" && ans != "n")
             {
+                Console.WriteLine(ans);
                 Console.WriteLine("Please type either y or n to respond!");
                 Console.WriteLine("Do you want to update this work item? y/n");
+                ans = Console.ReadLine();
+
             }
 
             return ans=="y";
@@ -40,8 +43,6 @@ namespace Hook.App
                 var entry = writer.Get(id);
                 Console.WriteLine($"Id={entry.Id}, Title={entry.Title}, Product={entry.Product}, Developer={entry.Developer}");
                 Console.WriteLine("xxxxxxxxxxxxxxx");
-
-
             }
         }
 
@@ -57,14 +58,13 @@ namespace Hook.App
                 {
                     Console.WriteLine($"Id={item.Id}, Title={item.Title}, Product={item.Product}, Developer={item.Developer}");
                     Console.WriteLine("xxxxxxxxxxxxxxx");
-
                 }
             }
         }
 
         public static WorkItem getChange(WorkItem item, string type)
         {
-        startEntry:
+            startEntry:
             Console.WriteLine($"Enter the new {type} required");
             if (type == "Title")
             {

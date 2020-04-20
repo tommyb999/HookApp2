@@ -7,10 +7,10 @@ namespace Hook.App
 {
     public static class updates
     {
-        private static IContainer Container { get; set; }
-
         public static void Update(int id)
         {
+            IContainer Container = common.ContainerCreation();
+
             using (var scope = Container.BeginLifetimeScope())
             {
                 var writer = scope.Resolve<IData>();
@@ -18,34 +18,31 @@ namespace Hook.App
 
                 var changedEntry = new WorkItem();
 
+                changedEntry.Id = entry.Id;
+
                 Console.WriteLine($"{entry.Id}:{entry.Title}:{entry.Product}:{entry.Developer}");
                 Console.WriteLine("xxxxxxxxxxxxxxx");
 
                 Console.WriteLine("Do you want to update this work item? y/n");
 
-                var workitemResponse = common.Response();
-
-                if (workitemResponse)
+                if (common.Response())
                 {
                     Console.WriteLine("Do you want to update the work item title? y/n");
-                    var titleResponse = common.Response();
-                    if (titleResponse)
+                    if (common.Response())
                     {
                         changedEntry = common.getChange(changedEntry, "Title");
                     }
 
                     Console.WriteLine("Do you want to update the work item product? y/n");
-                    var productResponse = common.Response();
-                    if (productResponse)
+                    if (common.Response())
                     {
                         changedEntry = common.getChange(changedEntry, "Product");
                     }
 
                     Console.WriteLine("Do you want to update the work item Developer? y/n");
-                    var devResponse = common.Response();
-                    if (devResponse)
+                    if (common.Response())
                     {
-                        changedEntry = common.getChange(changedEntry, "Developer");
+                        changedEntry = common.getDevChange(changedEntry);
                     }
 
                 }

@@ -15,7 +15,7 @@ namespace Hook.Data.Services
         {
             WorkItems = new List<WorkItem>();
 
-            string path = @"/Users/MartynBale/dev/HookApp2/json_output.json";
+            string path = @"H:\HookApp2\json_output.json";
 
             string text = File.ReadAllText(path);
             WorkItems = JsonConvert.DeserializeObject<List<WorkItem>>(text);
@@ -65,7 +65,7 @@ namespace Hook.Data.Services
         public void SaveToFile()
         {
             //Create a file to write to
-            string path = @"/Users/MartynBale/dev/HookApp2/json_output.json";
+            string path = @"H:\HookApp2\json_output.json";
 
             System.IO.File.WriteAllText(path, JsonConvert.SerializeObject(WorkItems));
         }

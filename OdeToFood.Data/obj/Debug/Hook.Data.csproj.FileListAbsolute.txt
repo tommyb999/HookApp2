@@ -13,3 +13,12 @@
 /Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/Hook.Data.csproj.CopyComplete
 /Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/OdeToFood.Data.dll
 /Users/MartynBale/dev/HookApp2/OdeToFood.Data/obj/Debug/OdeToFood.Data.pdb
+H:\HookApp2\OdeToFood.Data\bin\Debug\OdeToFood.Data.dll
+H:\HookApp2\OdeToFood.Data\bin\Debug\OdeToFood.Data.pdb
+H:\HookApp2\OdeToFood.Data\bin\Debug\Newtonsoft.Json.dll
+H:\HookApp2\OdeToFood.Data\bin\Debug\Newtonsoft.Json.xml
+H:\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csprojAssemblyReference.cache
+H:\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csproj.CoreCompileInputs.cache
+H:\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csproj.CopyComplete
+H:\HookApp2\OdeToFood.Data\obj\Debug\OdeToFood.Data.dll
+H:\HookApp2\OdeToFood.Data\obj\Debug\OdeToFood.Data.pdb

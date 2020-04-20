@@ -19,52 +19,45 @@ namespace Hook.App
 
             var finished = false;
 
-            bool updateWorkItem, deleteWorkItem, createWorkItem, moreChanges;
-
-
-
             while (finished == false)
             {
-                GetAll();
+                common.GetAll();
 
                 // Ask about updates
                 Console.WriteLine("Do you want to update any work items? y/n");
-                updateWorkItem = Response();
-                if (updateWorkItem)
+                if (common.Response())
                 {
                     Console.WriteLine("Enter the id of the work item you would like to update.");
                     var workitemID = Convert.ToInt32(Console.ReadLine());
 
-                    Update(workitemID);
+                    updates.Update(workitemID);
                 }
 
                 // Ask about deletes
                 Console.WriteLine("Do you want to delete any work items? y/n");
-                deleteWorkItem = Response();
-                if (deleteWorkItem)
+                if (common.Response())
                 {
                     Console.WriteLine("Enter the id of the work item you would like to delete.");
                     var workitemID = Convert.ToInt32(Console.ReadLine());
 
-                    Delete(workitemID);
+                    deletes.Delete(workitemID);
                 }
 
                 // Ask about creating a new entry
                 Console.WriteLine("Do you want to create a work item? y/n");
-                createWorkItem = Response();
-                if (deleteWorkItem)
+                if (common.Response())
                 {
                     Console.WriteLine("Enter the id of the work item you would like to delete.");
                     var workitemID = Convert.ToInt32(Console.ReadLine());
 
-                    Create();
+                    creates.Create();
                 }
 
-                GetAll();
+                common.GetAll();
 
                 // Ask whether user wants to make any more changes
                 Console.WriteLine("Do you want to make further changes? y/n");
-                moreChanges = !Response();
+               var moreChanges = !common.Response();
 
                 finished = moreChanges;
             }
@@ -74,7 +67,7 @@ namespace Hook.App
         }
 
 
-
+        /*
         //COMMON
         public static bool Response()
         {
@@ -303,6 +296,7 @@ namespace Hook.App
 
             }
         }
+        */
 
 
 
