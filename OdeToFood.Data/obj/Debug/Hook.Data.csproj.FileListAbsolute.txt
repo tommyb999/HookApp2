@@ -22,3 +22,12 @@ H:\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csproj.CoreCompileInputs.cache
 H:\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csproj.CopyComplete
 H:\HookApp2\OdeToFood.Data\obj\Debug\OdeToFood.Data.dll
 H:\HookApp2\OdeToFood.Data\obj\Debug\OdeToFood.Data.pdb
+H:\Github\HookApp2\OdeToFood.Data\bin\Debug\OdeToFood.Data.dll
+H:\Github\HookApp2\OdeToFood.Data\bin\Debug\OdeToFood.Data.pdb
+H:\Github\HookApp2\OdeToFood.Data\bin\Debug\Newtonsoft.Json.dll
+H:\Github\HookApp2\OdeToFood.Data\bin\Debug\Newtonsoft.Json.xml
+H:\Github\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csprojAssemblyReference.cache
+H:\Github\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csproj.CoreCompileInputs.cache
+H:\Github\HookApp2\OdeToFood.Data\obj\Debug\Hook.Data.csproj.CopyComplete
+H:\Github\HookApp2\OdeToFood.Data\obj\Debug\OdeToFood.Data.dll
+H:\Github\HookApp2\OdeToFood.Data\obj\Debug\OdeToFood.Data.pdb

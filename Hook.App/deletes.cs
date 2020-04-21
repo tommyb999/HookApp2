@@ -6,32 +6,34 @@ using Autofac;
 
 namespace Hook.App
 {
-    public static class deletes
+    public class Deletes : Common
     {
-        public static void Delete(int id)
+        public Deletes(IData db) : base(db)
         {
-            IContainer Container = common.ContainerCreation();
 
-            using (var scope = Container.BeginLifetimeScope())
+        }
+
+        public void Delete(int id)
+        {
+            
+
+            var entry = db.Get(id);
+
+            Console.WriteLine($"{entry.Id}:{entry.Title}:{entry.Product}:{entry.Developer}");
+            Console.WriteLine("xxxxxxxxxxxxxxx");
+
+            Console.WriteLine("Do you want to delete this work item? y/n");
+
+            if (Response())
             {
-                var writer = scope.Resolve<IData>();
-                var entry = writer.Get(id);
-
-                Console.WriteLine($"{entry.Id}:{entry.Title}:{entry.Product}:{entry.Developer}");
-                Console.WriteLine("xxxxxxxxxxxxxxx");
-
-                Console.WriteLine("Do you want to delete this work item? y/n");
-
-                if (common.Response())
-                {
-                    writer.Delete(entry.Id);
-                }
-
-                Console.WriteLine("Entry successfully deleted");
-                Console.WriteLine("Current list of work items:");
-                common.GetAll();
-
+                db.Delete(entry.Id);
             }
+
+            Console.WriteLine("Entry successfully deleted");
+            Console.WriteLine("Current list of work items:");
+            GetAll();
+
+            
         }
     }
 }

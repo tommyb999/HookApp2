@@ -5,56 +5,57 @@ using Autofac;
 
 namespace Hook.App
 {
-    public static class updates
+    public class Updates : Common
     {
-        public static void Update(int id)
+        public Updates(IData db) : base(db)
         {
-            IContainer Container = common.ContainerCreation();
 
-            using (var scope = Container.BeginLifetimeScope())
+        }
+
+        public void Update(int id)
+        {
+            
+            var entry = db.Get(id);
+
+            var changedEntry = new WorkItem();
+
+            changedEntry.Id = entry.Id;
+
+            Console.WriteLine($"{entry.Id}:{entry.Title}:{entry.Product}:{entry.Developer}");
+            Console.WriteLine("xxxxxxxxxxxxxxx");
+
+            Console.WriteLine("Do you want to update this work item? y/n");
+
+            if (Response())
             {
-                var writer = scope.Resolve<IData>();
-                var entry = writer.Get(id);
-
-                var changedEntry = new WorkItem();
-
-                changedEntry.Id = entry.Id;
-
-                Console.WriteLine($"{entry.Id}:{entry.Title}:{entry.Product}:{entry.Developer}");
-                Console.WriteLine("xxxxxxxxxxxxxxx");
-
-                Console.WriteLine("Do you want to update this work item? y/n");
-
-                if (common.Response())
+                Console.WriteLine("Do you want to update the work item title? y/n");
+                if (Response())
                 {
-                    Console.WriteLine("Do you want to update the work item title? y/n");
-                    if (common.Response())
-                    {
-                        changedEntry = common.getChange(changedEntry, "Title");
-                    }
-
-                    Console.WriteLine("Do you want to update the work item product? y/n");
-                    if (common.Response())
-                    {
-                        changedEntry = common.getChange(changedEntry, "Product");
-                    }
-
-                    Console.WriteLine("Do you want to update the work item Developer? y/n");
-                    if (common.Response())
-                    {
-                        changedEntry = common.getDevChange(changedEntry);
-                    }
-
+                    changedEntry = getChange(changedEntry, "Title");
                 }
 
-                writer.Update(changedEntry);
+                Console.WriteLine("Do you want to update the work item product? y/n");
+                if (Response())
+                {
+                    changedEntry = getChange(changedEntry, "Product");
+                }
 
-
-                Console.WriteLine("Entry successfully updated");
-                Console.WriteLine("New entry details:");
-                common.Get(changedEntry.Id);
+                Console.WriteLine("Do you want to update the work item Developer? y/n");
+                if (Response())
+                {
+                    changedEntry = getDevChange(changedEntry);
+                }
 
             }
+
+            db.Update(changedEntry);
+
+
+            Console.WriteLine("Entry successfully updated");
+            Console.WriteLine("New entry details:");
+            Get(changedEntry.Id);
+
+            
         }
 
 

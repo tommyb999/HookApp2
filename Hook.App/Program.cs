@@ -17,7 +17,13 @@ namespace Hook.App
             builder.RegisterType<InMemoryWorkItemData>().As<IData>();
             Container = builder.Build();
 
+            var scope = Container.BeginLifetimeScope();
+            
+            var db = scope.Resolve<IData>();
+
             var finished = false;
+
+            Common common = new Common(db);
 
             while (finished == false)
             {
@@ -30,6 +36,8 @@ namespace Hook.App
                     Console.WriteLine("Enter the id of the work item you would like to update.");
                     var workitemID = Convert.ToInt32(Console.ReadLine());
 
+                    Updates updates = new Updates(db);
+
                     updates.Update(workitemID);
                 }
 
@@ -40,6 +48,8 @@ namespace Hook.App
                     Console.WriteLine("Enter the id of the work item you would like to delete.");
                     var workitemID = Convert.ToInt32(Console.ReadLine());
 
+                    Deletes deletes = new Deletes(db);
+
                     deletes.Delete(workitemID);
                 }
 
@@ -47,8 +57,7 @@ namespace Hook.App
                 Console.WriteLine("Do you want to create a work item? y/n");
                 if (common.Response())
                 {
-                    Console.WriteLine("Enter the id of the work item you would like to delete.");
-                    var workitemID = Convert.ToInt32(Console.ReadLine());
+                    Creates creates = new Creates(db);
 
                     creates.Create();
                 }

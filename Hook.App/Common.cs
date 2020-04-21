@@ -5,19 +5,27 @@ using Hook.Data.Services;
 
 namespace Hook.App
 {
-    public static class common
+    public class Common
     {
-        private static IContainer Container { get; set; }
 
-        public static IContainer ContainerCreation()
+        public IData db;
+
+        public Common(IData db)
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<InMemoryWorkItemData>().As<IData>();
-            Container = builder.Build();
-            return Container;
+            this.db = db;
+
         }
 
-        public static bool Response()
+
+        //public static IContainer ContainerCreation()
+        //{
+        //    var builder = new ContainerBuilder();
+        //    builder.RegisterType<InMemoryWorkItemData>().As<IData>();
+        //    Container = builder.Build();
+        //    return Container;
+        //}
+
+        public bool Response()
         {
             var ans = Console.ReadLine().ToString();
 
@@ -33,36 +41,25 @@ namespace Hook.App
             return ans=="y";
         }
 
-        public static void Get(int id)
+        public void Get(int id)
         {
-            IContainer Container = ContainerCreation();
+             var entry = db.Get(id);
+            Console.WriteLine($"Id={entry.Id}, Title={entry.Title}, Product={entry.Product}, Developer={entry.Developer}");
+            Console.WriteLine("xxxxxxxxxxxxxxx");
+        }
 
-            using (var scope = Container.BeginLifetimeScope())
+        public void GetAll()
+        {
+            var entries = db.GetAll();
+            foreach (var item in entries)
             {
-                var writer = scope.Resolve<IData>();
-                var entry = writer.Get(id);
-                Console.WriteLine($"Id={entry.Id}, Title={entry.Title}, Product={entry.Product}, Developer={entry.Developer}");
+                Console.WriteLine($"Id={item.Id}, Title={item.Title}, Product={item.Product}, Developer={item.Developer}");
                 Console.WriteLine("xxxxxxxxxxxxxxx");
             }
+            
         }
 
-        public static void GetAll()
-        {
-            IContainer Container = ContainerCreation();
-
-            using (var scope = Container.BeginLifetimeScope())
-            {
-                var writer = scope.Resolve<IData>();
-                var entries = writer.GetAll();
-                foreach (var item in entries)
-                {
-                    Console.WriteLine($"Id={item.Id}, Title={item.Title}, Product={item.Product}, Developer={item.Developer}");
-                    Console.WriteLine("xxxxxxxxxxxxxxx");
-                }
-            }
-        }
-
-        public static WorkItem getChange(WorkItem item, string type)
+        public WorkItem getChange(WorkItem item, string type)
         {
             startEntry:
             Console.WriteLine($"Enter the new {type} required");
@@ -82,7 +79,7 @@ namespace Hook.App
             }
 
             //Confirm happy with the new entry
-            if (!common.Response())
+            if (!Response())
             {
                 goto startEntry;
             }
@@ -90,7 +87,7 @@ namespace Hook.App
             return item;
         }
 
-        public static WorkItem getDevChange(WorkItem item)
+        public WorkItem getDevChange(WorkItem item)
         {
             DevStart:
             Console.WriteLine("Select the developer for the task");
@@ -110,15 +107,22 @@ namespace Hook.App
                 }
                 
                 item.Developer = (DeveloperType)newDev;
-
-                return item;
+                Console.WriteLine($"Developer set to {item.Developer}, is this correct? y/n");
+                if (Response())
+                {
+                    return item;
+                }
+                else
+                {
+                    goto DevStart;
+                }
             }
             catch (Exception e)
             {
                 Console.WriteLine($"{e}");
                 return item;
             }
-            
+
         }
 
     }

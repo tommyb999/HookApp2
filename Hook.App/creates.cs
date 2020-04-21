@@ -6,64 +6,60 @@ using Autofac;
 
 namespace Hook.App
 {
-    public static class creates
+    public class Creates : Common
     {
-
-        public static void Create()
+        public Creates(IData db) : base(db)
         {
-            IContainer Container = common.ContainerCreation();
+        }
+        public void Create()
+        {
+            var changedEntry = new WorkItem();
 
-            using (var scope = Container.BeginLifetimeScope())
+            Console.WriteLine("Do you want to create a work item? y/n");
+
+            if (Response())
             {
-                var writer = scope.Resolve<IData>();
-
-                var changedEntry = new WorkItem();
-
-                Console.WriteLine("Do you want to create a work item? y/n");
-
-                if (common.Response())
+                Console.WriteLine("Do you want to update the work item title? y/n");
+                var titleResponse = Response();
+                if (titleResponse)
                 {
-                    Console.WriteLine("Do you want to update the work item title? y/n");
-                    var titleResponse = common.Response();
-                    if (titleResponse)
-                    {
-                        changedEntry = common.getChange(changedEntry, "Title");
-                    }
-                    else
-                    {
-                        changedEntry.Title = "Empty";
-                    }
-
-                    Console.WriteLine("Do you want to update the work item product? y/n");
-                    if (common.Response())
-                    {
-                        changedEntry = common.getChange(changedEntry, "Product");
-                    }
-                    else
-                    {
-                        changedEntry.Product = "Empty";
-                    }
-
-                    Console.WriteLine("Do you want to update the work item Developer? y/n");
-                    if (common.Response())
-                    {
-                        changedEntry = common.getDevChange(changedEntry);
-                    }
-                    else
-                    {
-                        changedEntry.Developer = (DeveloperType)0;
-                    }
+                    changedEntry = getChange(changedEntry, "Title");
+                }
+                else
+                {
+                    changedEntry.Title = "Empty";
                 }
 
+                Console.WriteLine("Do you want to update the work item product? y/n");
+                if (Response())
+                {
+                    changedEntry = getChange(changedEntry, "Product");
+                }
+                else
+                {
+                    changedEntry.Product = "Empty";
+                }
 
-                writer.Add(changedEntry);
-
-
-                Console.WriteLine("Entry successfully created");
-                Console.WriteLine("New entry details:");
-                common.Get(changedEntry.Id);
-
+                Console.WriteLine("Do you want to update the work item Developer? y/n");
+                if (Response())
+                {
+                    changedEntry = getDevChange(changedEntry);
+                }
+                else
+                {
+                    changedEntry.Developer = (DeveloperType)0;
+                }
             }
+
+
+            db.Add(changedEntry);
+
+
+            Console.WriteLine("Entry successfully created");
+            Console.WriteLine("New entry details:");
+            Get(changedEntry.Id);
+
+            
         }
     }
 }
