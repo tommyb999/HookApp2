@@ -16,16 +16,6 @@ namespace Hook.App
 
         }
 
-
-
-        //public static IContainer ContainerCreation()
-        //{
-        //    var builder = new ContainerBuilder();
-        //    builder.RegisterType<InMemoryWorkItemData>().As<IData>();
-        //    Container = builder.Build();
-        //    return Container;
-        //}
-
         public bool Response()
         {
             var ans = Console.ReadLine().ToString();
