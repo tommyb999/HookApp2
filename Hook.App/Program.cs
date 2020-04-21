@@ -15,15 +15,21 @@ namespace Hook.App
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<InMemoryWorkItemData>().As<IData>();
+            builder.RegisterType<Creates>();
+            builder.RegisterType<Updates>();
+            builder.RegisterType<Deletes>();
+            builder.RegisterType<Common>();
             Container = builder.Build();
 
             var scope = Container.BeginLifetimeScope();
             
             var db = scope.Resolve<IData>();
+            var common = scope.Resolve<Common>();
+            var updates = scope.Resolve<Updates>();
+            var deletes = scope.Resolve<Deletes>();
+            var creates = scope.Resolve<Creates>();
 
             var finished = false;
-
-            Common common = new Common(db);
 
             while (finished == false)
             {
@@ -36,8 +42,6 @@ namespace Hook.App
                     Console.WriteLine("Enter the id of the work item you would like to update.");
                     var workitemID = Convert.ToInt32(Console.ReadLine());
 
-                    Updates updates = new Updates(db);
-
                     updates.Update(workitemID);
                 }
 
@@ -48,8 +52,6 @@ namespace Hook.App
                     Console.WriteLine("Enter the id of the work item you would like to delete.");
                     var workitemID = Convert.ToInt32(Console.ReadLine());
 
-                    Deletes deletes = new Deletes(db);
-
                     deletes.Delete(workitemID);
                 }
 
@@ -57,8 +59,6 @@ namespace Hook.App
                 Console.WriteLine("Do you want to create a work item? y/n");
                 if (common.Response())
                 {
-                    Creates creates = new Creates(db);
-
                     creates.Create();
                 }
 

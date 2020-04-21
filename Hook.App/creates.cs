@@ -19,7 +19,7 @@ namespace Hook.App
 
             if (Response())
             {
-                Console.WriteLine("Do you want to update the work item title? y/n");
+                Console.WriteLine("Do you want to add a work item title? y/n");
                 var titleResponse = Response();
                 if (titleResponse)
                 {
@@ -30,7 +30,7 @@ namespace Hook.App
                     changedEntry.Title = "Empty";
                 }
 
-                Console.WriteLine("Do you want to update the work item product? y/n");
+                Console.WriteLine("Do you want to add a work item product? y/n");
                 if (Response())
                 {
                     changedEntry = getChange(changedEntry, "Product");
@@ -40,7 +40,7 @@ namespace Hook.App
                     changedEntry.Product = "Empty";
                 }
 
-                Console.WriteLine("Do you want to update the work item Developer? y/n");
+                Console.WriteLine("Do you want to set the work item Developer? y/n");
                 if (Response())
                 {
                     changedEntry = getDevChange(changedEntry);
