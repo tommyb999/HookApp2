@@ -58,3 +58,5 @@ H:\Github\HookApp2\Hook.App\obj\Debug\Hook.App.csproj.CoreCompileInputs.cache
 H:\Github\HookApp2\Hook.App\obj\Debug\Hook.App.csproj.CopyComplete
 H:\Github\HookApp2\Hook.App\obj\Debug\Hook.App.exe
 H:\Github\HookApp2\Hook.App\obj\Debug\Hook.App.pdb
+H:\Github\HookApp2\Hook.App\bin\Debug\Microsoft.Extensions.CommandLineUtils.dll
+H:\Github\HookApp2\Hook.App\bin\Debug\Microsoft.Extensions.CommandLineUtils.xml

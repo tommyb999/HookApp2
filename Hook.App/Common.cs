@@ -113,6 +113,53 @@ namespace Hook.App
                 Console.WriteLine($"{e}");
                 return item;
             }
+        }
+
+        public int DevMatch(string name)
+        {
+            name.ToUpper();
+            if (name == "NONE")
+            {
+                return 0;
+            }
+            else if (name == "TOM")
+            {
+                return 1;
+            }
+            else if (name == "TOM")
+            {
+                return 2;
+            }
+            else if (name == "TOM")
+            {
+                return 3;
+            }
+            else
+            {
+                throw new System.ArgumentException("Developer name doesn't match Developer list; Please enter either None, Tom, Manish or Josh");
+            }
+        }
+
+        public void DevChange(int Dev, WorkItem workitem)
+        {
+            try
+            {
+
+                if (Dev != 0 && Dev != 1 && Dev != 2 && Dev != 3)
+                {
+                    Console.WriteLine("Invalid entry, Developer set to [None]");
+                    workitem.Developer = (DeveloperType)0;
+                }
+                else
+                {
+                    workitem.Developer = (DeveloperType)Dev;
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{e}");
+            }
 
         }
 
